@@ -1,19 +1,8 @@
-import React, { useRef } from "react";
-import useDraggable from "./useDrag";
+import React from "react";
+import DraggableCard from './useDrag'
+
 
 import "./App.css";
-
-const DraggableCard = ({ children }) => {
-  const cardRef = useRef(null);
-  useDraggable(cardRef);
-
-  return (
-    <div className="card" ref={cardRef}>
-      {children}
-    </div>
-  );
-};
-
 function App() {
   return (
     <div className="container">
@@ -27,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

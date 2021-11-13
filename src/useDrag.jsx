@@ -7,12 +7,10 @@ export default function useDraggable(el) {
     const handleMouseDown = event => {
       const startX = event.pageX - dx;
       const startY = event.pageY - dy;
-      console.log(startX,startY)
 
       const handleMouseMove = event => {
         const newDx = event.pageX - startX;
         const newDy = event.pageY - startY;
-        console.log(newDx,newDy)
         setOffset({ dx: newDx, dy: newDy });
       };
 
